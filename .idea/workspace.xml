@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bd320af7-032b-4c0c-95d3-c24d1ef0cb79" name="Default" comment="">
+    <list default="true" id="bd320af7-032b-4c0c-95d3-c24d1ef0cb79" name="Default" comment="Seperated template">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core.css" afterPath="$PROJECT_DIR$/core.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core.styl" afterPath="$PROJECT_DIR$/core.styl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -51,11 +51,12 @@
       <file leaf-file-name="core.styl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core.styl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.67781496" vertical-offset="7501" max-vertical-offset="10523">
-              <caret line="473" column="41" selection-start-line="473" selection-start-column="41" selection-end-line="473" selection-end-column="41" />
+            <state vertical-scroll-proportion="0.6399108" vertical-offset="2248" max-vertical-offset="10591">
+              <caret line="165" column="21" selection-start-line="165" selection-start-column="21" selection-end-line="165" selection-end-column="21" />
               <folding>
-                <element signature="e#8183#8424#2" expanded="true" />
-                <element signature="e#8425#8818#2" expanded="true" />
+                <element signature="e#1986#2263#2" expanded="true" />
+                <element signature="e#8532#8773#2" expanded="true" />
+                <element signature="e#8774#9167#2" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -245,7 +246,13 @@
       <option name="project" value="LOCAL" />
       <updated>1427842388914</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Seperated template">
+      <created>1427842763085</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1427842763085</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -326,8 +333,8 @@
         <state vertical-scroll-proportion="1.4182016" vertical-offset="6494" max-vertical-offset="11067">
           <caret line="459" column="1" selection-start-line="459" selection-start-column="1" selection-end-line="459" selection-end-column="1" />
           <folding>
-            <element signature="e#10415#10656#1" expanded="false" />
-            <element signature="e#10658#11051#1" expanded="false" />
+            <element signature="e#10762#11003#1" expanded="false" />
+            <element signature="e#11005#11398#1" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -370,11 +377,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core.styl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.67781496" vertical-offset="7501" max-vertical-offset="10523">
-          <caret line="473" column="41" selection-start-line="473" selection-start-column="41" selection-end-line="473" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.6399108" vertical-offset="2248" max-vertical-offset="10591">
+          <caret line="165" column="21" selection-start-line="165" selection-start-column="21" selection-end-line="165" selection-end-column="21" />
           <folding>
-            <element signature="e#8183#8424#2" expanded="true" />
-            <element signature="e#8425#8818#2" expanded="true" />
+            <element signature="e#1986#2263#2" expanded="true" />
+            <element signature="e#8532#8773#2" expanded="true" />
+            <element signature="e#8774#9167#2" expanded="true" />
           </folding>
         </state>
       </provider>
