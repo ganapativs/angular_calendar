@@ -1,0 +1,491 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:500,400italic,300,700,400);
+//C-color, F-font
+Froboto='Roboto', sans-serif;
+Cred=#FC284F  //Red color - Arya core color
+Cblue=#0A516D  //Blue color - Links and Action color
+Cgreen=#036564  //Green color - Major Titles and Action color
+Cyellow=#F8A13F  //Yellow color - User interaction and user area color
+Cpurple=#1A081F  //Purple color - Borders, seperators, Title color
+Clightgreen=#61C155  //Light green color - Alternate color and minimal usage
+
+/*White variant colors*/
+Cff=#fff
+Cfc=#fcfcfc
+Cfa=#fafafa
+Cf1=#f1f1f1
+Cf5=#f5f5f5
+Ceee=#eee
+Cddd=#ddd
+Cccc=#ccc
+Caaa=#aaa
+C999=#999
+
+anim_func=cubic-bezier(0.495, 1.415, 0.760, 1.035)
+
+
+//Postions functions example
+/*absolute: top 150px left 5px*/
+/*fixed: top left*/
+
+-pos(type, args)
+  i = 0
+  position: unquote(type) !important
+  {args[i]}: args[i + 1] is a 'unit' ? args[i += 1]  !important : 0
+  {args[i += 1]}: args[i + 1] is a 'unit' ? args[i += 1] !important : 0
+absolute()
+  -pos('absolute', arguments)
+
+fixed()
+  -pos('fixed', arguments)
+
+/*vandor prefixes*/
+
+vendors = webkit moz o ms official
+
+border-radius()
+  for vendor in vendors
+    if vendor == official
+      border-radius: arguments
+    else
+      -{vendor}-border-radius: arguments
+
+
+transition()
+  for vendor in vendors
+    if vendor == official
+      transition: arguments
+    else
+      -{vendor}-transition: arguments
+
+
+
+animation()
+  for vendor in vendors
+    if vendor == official
+      animation: arguments
+    else
+      -{vendor}-animation: arguments
+
+transform()
+  for vendor in vendors
+    if vendor == official
+      transform: arguments
+    else
+      -{vendor}-transform: arguments
+
+
+box-shadow()
+  for vendor in vendors
+    if vendor == official
+      box-shadow: arguments
+    else
+      -{vendor}-box-shadow: arguments
+
+
+body,
+html
+  font-family Froboto
+  background #f1f1f1
+
+html
+  min-height: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+body
+  padding 50px 0
+  line-height 1.5
+  letter-spacing: .1px;
+  min-height: 100%;
+  height: 100%;
+  margin: 0;
+  position relative
+
+a
+  color inherit
+  &:link,&:visited,&:active,&:focus
+    color inherit
+
+.none
+  display none
+
+[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak
+  display:none !important;
+
+/* when hiding the thing */
+.ng-hide-add{
+  animation:.3s zoomOut ease-in;
+  opacity 0
+}
+
+/* when showing the thing */
+.ng-hide-remove{
+  animation:.3s zoomIn ease-in;
+  opacity 1
+}
+
+.page_loading
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  z-index: 99999;
+  height: 40px;
+  line-height: 36px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 300;
+  animation:2s color_change anim_func infinite alternate;
+  i
+    animation:2s loading_spin anim_func infinite;
+
+
+
+.calender_wrap
+  text-align center
+  color Cyellow
+
+.sel_date
+  display block
+  padding-top 30px
+
+
+calendar
+  display: block;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  background: white;
+  width: 400px;
+  border: solid 1px #cccccc;
+  margin 0 auto
+  margin-bottom: 10px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 15px 1px #ccc;
+  overflow: hidden;
+  > .ng_calender .header
+    float: left;
+    width: 100%;
+    background: Cred;
+    height: 40px;
+    color: #fff;
+    position relative
+  .ng_calender
+    .header
+      > *
+        height: 40px;
+        line-height: 40px !important;
+        display: inline-block;
+        vertical-align: middle;
+      > i
+        float: left;
+        width: 40px;
+        font-weight: bold;
+        position: relative;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        padding: 0 10px;
+        cursor: pointer;
+        font-size: 24px;
+        text-align center
+        &.ion-arrow-left-b
+          text-align: left;
+          z-index: 2;
+        &.ion-arrow-right-b
+          text-align: right;
+          float: right;
+          z-index: 2;
+      > span
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        color: inherit;
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
+        position: absolute;
+        left: 50%;
+        top: 0;
+        margin: 0;
+        font-size 16px
+        padding: 0 40px;
+        white-space: nowrap;
+        width: auto;
+        text-align: left;
+        transform: translate(-50%,0);
+        z-index: 1;
+        transition all .6s linear
+      &.shrink
+        >span
+          font-size 13px
+          left: 0;
+          transform: translate(0,0);
+  .week
+    float: left;
+    width: 100%;
+    border-top: solid 1px #eee;
+    /*transition all 0.2s ease*/
+    &.shrink
+      border-top none
+    &:first-child
+      border-top: none;
+    > span.day
+      float: left;
+      width: 14.28571429%;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      border-left: solid 1px #eee;
+      text-align: center;
+      height: 40px;
+      line-height: 30px !important;
+      display: inline-block;
+      vertical-align: middle;
+      background: white;
+      cursor: pointer;
+      color: Cpurple;
+      position relative
+      opacity 1
+      font-size: 13px;
+      font-weight: 500;
+      overflow: hidden;
+      box-shadow: 0px 1px 2px #F5F5F5 inset;
+      transition all 0.6s ease-in-out
+      &:before
+        content ""
+        background Cgreen
+        absolute left 50% top 50%
+        width 0
+        height 0
+        opacity 0.2
+        border-radius 50%
+        transition all 0.4s anim_func
+      &:hover
+        background: #f1f1f1;
+      &:first-child
+        border-left: none;
+      &.today
+        background: #E3F2FF;
+      &.other_month
+        color: #C0C0C0;
+      &.shrink
+        opacity 0
+        width: 0 !important;
+        height: 0 !important;
+      &.selected
+        background: transparent;
+        color: white;
+        border-left 0
+        &:before
+          content ""
+          background #0A516D
+          absolute left 0 top 0%
+          width 100%
+          height 100%
+          border-radius 0
+          opacity 1
+        > span
+          position relative
+        > .day_num
+          color: #fff;
+      >i
+        position absolute
+        opacity 0
+        font-size: 0;
+        line-height 0
+        top 0
+        left -999px
+        color transparent
+        z-index: 100;
+        transition all 0.4s ease
+        &.ion-arrow-right-a
+          left auto
+          right -999px
+      > span
+          line-height: 40px;
+          font-size: 13px;
+          transition font-size  0.6s anim_func, line-height  0.6s anim_func
+      > .day_num
+          display block
+          line-height: 32px;
+          height: 40px;
+          overflow hidden
+          > .day_event
+            display: block;
+            height: 4px;
+            width: 80%;
+            font-size: 1px;
+            color transparent
+            position: relative;
+            margin-left: 10%;
+            &:before
+              content ""
+              absolute left 0 top 0
+              transition all 0.4s ease
+              width 100%
+              height 100%
+              background #f1f1f1
+            &:after
+              content ""
+              transition all 0.8s ease
+              absolute left 0 top 0
+              width 0
+              opacity 1
+              height 100%
+              background Cyellow
+            &.w1
+              &:after
+                width 33.33%
+            &.w2
+              &:after
+                width 66.66%
+            &.w3
+              &:after
+                width 100%
+            &.event_title
+              height: 30px;
+              font-size: 15px;
+              line-height: 26px;
+              color: Cyellow;
+              width: 100%;
+              margin-left: 0;
+              background: rgba(10, 81, 109, 0.5);
+              &:after
+                background transparent
+                opacity 0
+              &:before
+                background transparent
+      &.day_title
+        display: block;
+        width: 100%;
+        font-size: 40px;
+        height: 90px;
+        text-shadow: 1px 1px rgba(0,0,0,0.4);
+        line-height: 60px !important;
+        &:before
+          background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPjxwYXRoIGQ9Ik0tMiAxMEwxMCAtMlpNMTAgNkw2IDEwWk0tMiAyTDIgLTIiIHN0cm9rZT0iIzBBNTE2RCIgc3Ryb2tlLXdpZHRoPSI0LjUiPjwvcGF0aD4KPC9zdmc+"),url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgyPSIxIiB5Mj0iMSI+CjxzdG9wIHN0b3AtY29sb3I9IiM1QjUyN0YiPjwvc3RvcD4KPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDA1QkM1Ij48L3N0b3A+CjwvbGluZWFyR3JhZGllbnQ+CjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZykiPjwvcmVjdD4KPC9zdmc+");
+        > .day_num
+            line-height 60px
+            font-size: 40px;
+            height: 90px;
+        >i
+          position: absolute;
+          left: 10px;
+          font-size: 0;
+          line-height 0
+          top 0
+          color #fff
+          z-index: 100;
+          transition all 0.4s ease
+          /*transition-delay 0.6s*/
+          opacity: 0.8;
+          &:hover
+            opacity 1
+          &.ion-arrow-right-a
+            left auto
+            right 10px
+          &.active
+            font-size: 30px;
+            line-height 60px
+    &.names
+      opacity 1
+      height 40px !important
+      transition all 0.4s ease
+      &.shrink
+        opacity 0
+        width: 0 !important;
+        height: 0 !important;
+      > span
+        color: #005BC5;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 40px !important;
+        background #f5f5f5
+
+  .timebar
+    float: left;
+    width: 100%;
+    /*padding-top: 8px;*/
+    border-top: 2px solid;
+    background: #fff;
+    opacity 0
+    overflow hidden
+    transition all 0.2s anim_func
+    .hour
+      float: left;
+      width: 100%;
+      display: block;
+      opacity 0
+      height 0
+      margin-top -10px
+      margin-left: -10px;
+      transition all 0.3s anim_func
+      .left
+        width: 80px;
+        text-align: center;
+        /*border-right: 1px solid #eee;*/
+        /*background: #f5f5f5;*/
+        line-height: 30px;
+        vertical-align: middle;
+        height 40px
+        font-size: 13px;
+        float left
+        position relative
+        &:before
+          content: "";
+          position: absolute;
+          width: 2px;
+          height: 100%;
+          left: calc(50% - 1px);
+          background: rgba(0, 102, 255, 0.6);
+        > span
+          width: 30px;
+          display: block;
+          margin: 0 auto;
+          height: 30px;
+          line-height: 30px;
+          vertical-align: middle;
+          margin-top: 5px;
+          background: #ccc;
+          border-radius: 50%;
+          text-align: center;
+          color: #fff;
+          font-size: 11px;
+          position: relative;
+          &.active
+            background: rgba(0, 102, 255, 0.8);
+      .right
+        display: flex;
+        border-bottom: 1px solid #eee;
+        height: 39px;
+        width: calc(100% - 81px);
+      &.active
+        height 40px
+        margin-left: 0;
+        opacity 1
+        margin-top 0
+        transition-delay 0
+    &.active
+      opacity 1
+    &.ng-hide-add{
+      animation:0.4s slideInUp anim_func;
+      opacity 1
+    }
+
+@keyframes color_change {
+  0% {
+    color Clightgreen
+  }
+  100% {
+    color Cyellow
+  }
+}
+
+@keyframes loading_spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}

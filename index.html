@@ -1,0 +1,114 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""  ng-strict-di> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css">
+    <link rel="stylesheet" href="core.css">
+
+</head>
+<body>
+<div class="page_loading"><i class="ion-load-c"></i> Loading...</div>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div class="calender_wrap" ng-controller="calender as cal" ng-cloak>
+    <calendar selected="cal.today" ng-model="cal.events"></calendar>
+    <!--<span class="sel_date">Selected date: <b>{{cal.today.format('dddd, MMMM Do YYYY')}}</b></span>-->
+    <span class="sel_date">Selected date: <b>{{cal.today.format('DD-MM-YYYY')}}</b></span>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/labjs/2.0.3/LAB.min.js"></script>
+
+<script>
+    $LAB.setOptions({ AlwaysPreserveOrder:true });
+    $LAB
+            .queueScript('https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js')
+            .queueWait()
+            .queueScript('//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.12/angular-animate.min.js')
+            .queueScript('http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-touch.min.js')
+            .queueScript('moment.min.js')
+            .queueWait()
+            .queueScript('app.js')
+            .queueWait(function(){
+                setTimeout(function(){
+                    angular.bootstrap(document, ['calender']);
+                    document.querySelector('.page_loading').style.display='none';
+                },0)
+            })
+            .runQueue();
+</script>
+
+<!--Calender angular template-->
+<script type="text/ng-template" id="calendar.html">
+    <div class="ng_calender">
+        <div class="header" ng-class="{'shrink':currentDate}">
+            <i class="ion-arrow-left-b" ng-click="previous()"></i>
+            <span><span class="ion-calendar"></span> {{month.format("MMMM, YYYY")}}</span>
+            <i class="ion-arrow-right-b" ng-click="next()"></i>
+        </div>
+        <div class="week names"
+                     ng-class="{'shrink':currentDate}"
+                     ng-hide="currentDate">
+            <span class="day">Sun</span>
+            <span class="day">Mon</span>
+            <span class="day">Tue</span>
+            <span class="day">Wed</span>
+            <span class="day">Thu</span>
+            <span class="day">Fri</span>
+            <span class="day">Sat</span>
+        </div>
+        <div class="week"
+                     ng-repeat="week in weeks  track by $index"
+                     ng-class="{'shrink':currentDate}"
+                     ng-init="track=$index">
+            <span class="day"
+                          ng-class="{ today: day.isToday, 'other_month': !day.isCurrentMonth, selected: day.date.isSame(selected), 'shrink':currentDate&&day!=currentDate, 'day_title': day==currentDate}"
+                          ng-click="(!day.isCurrentMonth&&day.number<7&&select(day)&&next(1))||(!day.isCurrentMonth&&day.number>21&&select(day)&&previous(1))||select(day); $event.stopPropagation();"
+                          ng-hide="currentDate&&day!=currentDate"
+                          ng-repeat="day in week.days track by $index">
+                <i class="ion-arrow-left-a"
+                           ng-show="day==currentDate"
+                           ng-class="{'active':day==currentDate}"
+                           ng-click="$event.stopPropagation();prevday(day,$index,weeks,track);"></i>  <!--prev date-->
+                <span ng-class="{day_num:eventsList[day.date.format('DD-MM-YYYY')].length || day==currentDate}">
+                    {{day.number}}
+                    <!--show event counts only when clicked-->
+                    <span class="day_event" ng-if="eventsList[day.date.format('DD-MM-YYYY')].length || day==currentDate" ng-class="{'w1': eventsList[day.date.format('DD-MM-YYYY')].length==1,'w2':eventsList[day.date.format('DD-MM-YYYY')].length==2,'w3':eventsList[day.date.format('DD-MM-YYYY')].length>=3,  'event_title': day==currentDate}">
+                        <i class="ion-clock"></i> {{ eventsList[day.date.format('DD-MM-YYYY')].length | inWords | capitalize }} event{{(eventsList[day.date.format('DD-MM-YYYY')].length>=2&&'s')||''}} {{ day.isToday&&'today' || '' }}
+                    </span>
+                </span>
+                <i class="ion-arrow-right-a"
+                           ng-show="day==currentDate"
+                           ng-class="{'active':day==currentDate}"
+                           ng-click=" $event.stopPropagation();nextday(day,$index,weeks,track);"></i>  <!--next date-->
+            </span>
+        </div>
+        <div class="timebar"
+                     ng-show="currentDate"
+                     ng-class="{'active':currentDate}">
+            <div class="hour" ng-class="{'active':currentDate}">
+                <!--<span>{{ eventsList[formatted] }}</span>-->
+            </div>
+            <div class="hour"
+                         ng-repeat="h in hours track by $index"
+                         ng-class="{'active':currentDate}"
+                         ng-style="transition($index)">
+                <div class="left"><span>{{(h+11)%12+1}}<small>{{ (h<12)&&'AM'||(h>=12)&&'PM'  }}</small></span></div>
+                <div class="right"></div>
+            </div>
+        </div>
+    </div>
+</script>
+
+</body>
+</html>

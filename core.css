@@ -1,0 +1,645 @@
+@import url("http://fonts.googleapis.com/css?family=Roboto:500,400italic,300,700,400");
+/*White variant colors*/
+/*absolute: top 150px left 5px*/
+/*fixed: top left*/
+/*vandor prefixes*/
+body,
+html {
+  font-family: 'Roboto', sans-serif;
+  background: #f1f1f1;
+}
+html {
+  min-height: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  padding: 50px 0;
+  line-height: 1.5;
+  letter-spacing: 0.1px;
+  min-height: 100%;
+  height: 100%;
+  margin: 0;
+  position: relative;
+}
+a {
+  color: inherit;
+}
+a:link,
+a:visited,
+a:active,
+a:focus {
+  color: inherit;
+}
+.none {
+  display: none;
+}
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+  display: none !important;
+}
+/* when hiding the thing */
+.ng-hide-add {
+  -webkit-animation: 0.3s zoomOut ease-in;
+  -moz-animation: 0.3s zoomOut ease-in;
+  -o-animation: 0.3s zoomOut ease-in;
+  -ms-animation: 0.3s zoomOut ease-in;
+  animation: 0.3s zoomOut ease-in;
+  opacity: 0;
+}
+/* when showing the thing */
+.ng-hide-remove {
+  -webkit-animation: 0.3s zoomIn ease-in;
+  -moz-animation: 0.3s zoomIn ease-in;
+  -o-animation: 0.3s zoomIn ease-in;
+  -ms-animation: 0.3s zoomIn ease-in;
+  animation: 0.3s zoomIn ease-in;
+  opacity: 1;
+}
+.page_loading {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  z-index: 99999;
+  height: 40px;
+  line-height: 36px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 300;
+  -webkit-animation: 2s color_change cubic-bezier(0.495, 1.415, 0.76, 1.035) infinite alternate;
+  -moz-animation: 2s color_change cubic-bezier(0.495, 1.415, 0.76, 1.035) infinite alternate;
+  -o-animation: 2s color_change cubic-bezier(0.495, 1.415, 0.76, 1.035) infinite alternate;
+  -ms-animation: 2s color_change cubic-bezier(0.495, 1.415, 0.76, 1.035) infinite alternate;
+  animation: 2s color_change cubic-bezier(0.495, 1.415, 0.76, 1.035) infinite alternate;
+}
+.page_loading i {
+  -webkit-animation: 2s loading_spin cubic-bezier(0.495, 1.415, 0.76, 1.035) infinite;
+  -moz-animation: 2s loading_spin cubic-bezier(0.495, 1.415, 0.76, 1.035) infinite;
+  -o-animation: 2s loading_spin cubic-bezier(0.495, 1.415, 0.76, 1.035) infinite;
+  -ms-animation: 2s loading_spin cubic-bezier(0.495, 1.415, 0.76, 1.035) infinite;
+  animation: 2s loading_spin cubic-bezier(0.495, 1.415, 0.76, 1.035) infinite;
+}
+.calender_wrap {
+  text-align: center;
+  color: #f8a13f;
+}
+.sel_date {
+  display: block;
+  padding-top: 30px;
+}
+calendar {
+  display: block;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  background: #fff;
+  width: 400px;
+  border: solid 1px #ccc;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 1px 1px 15px 1px #ccc;
+  -moz-box-shadow: 1px 1px 15px 1px #ccc;
+  -o-box-shadow: 1px 1px 15px 1px #ccc;
+  -ms-box-shadow: 1px 1px 15px 1px #ccc;
+  box-shadow: 1px 1px 15px 1px #ccc;
+  overflow: hidden;
+}
+calendar > .ng_calender .header {
+  float: left;
+  width: 100%;
+  background: #fc284f;
+  height: 40px;
+  color: #fff;
+  position: relative;
+}
+calendar .ng_calender .header > * {
+  height: 40px;
+  line-height: 40px !important;
+  display: inline-block;
+  vertical-align: middle;
+}
+calendar .ng_calender .header > i {
+  float: left;
+  width: 40px;
+  font-weight: bold;
+  position: relative;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 0 10px;
+  cursor: pointer;
+  font-size: 24px;
+  text-align: center;
+}
+calendar .ng_calender .header > i.ion-arrow-left-b {
+  text-align: left;
+  z-index: 2;
+}
+calendar .ng_calender .header > i.ion-arrow-right-b {
+  text-align: right;
+  float: right;
+  z-index: 2;
+}
+calendar .ng_calender .header > span {
+  float: left;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  color: inherit;
+  text-shadow: 1px 1px rgba(0,0,0,0.4);
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin: 0;
+  font-size: 16px;
+  padding: 0 40px;
+  white-space: nowrap;
+  width: auto;
+  text-align: left;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  z-index: 1;
+  -webkit-transition: all 0.6s linear;
+  -moz-transition: all 0.6s linear;
+  -o-transition: all 0.6s linear;
+  -ms-transition: all 0.6s linear;
+  transition: all 0.6s linear;
+}
+calendar .ng_calender .header.shrink >span {
+  font-size: 13px;
+  left: 0;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+calendar .week {
+  float: left;
+  width: 100%;
+  border-top: solid 1px #eee;
+/*transition all 0.2s ease*/
+}
+calendar .week.shrink {
+  border-top: none;
+}
+calendar .week:first-child {
+  border-top: none;
+}
+calendar .week > span.day {
+  float: left;
+  width: 14.28571429%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  border-left: solid 1px #eee;
+  text-align: center;
+  height: 40px;
+  line-height: 30px !important;
+  display: inline-block;
+  vertical-align: middle;
+  background: #fff;
+  cursor: pointer;
+  color: #1a081f;
+  position: relative;
+  opacity: 1;
+  font-size: 13px;
+  font-weight: 500;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 1px 2px #f5f5f5 inset;
+  -moz-box-shadow: 0px 1px 2px #f5f5f5 inset;
+  -o-box-shadow: 0px 1px 2px #f5f5f5 inset;
+  -ms-box-shadow: 0px 1px 2px #f5f5f5 inset;
+  box-shadow: 0px 1px 2px #f5f5f5 inset;
+  -webkit-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+  -ms-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
+calendar .week > span.day:before {
+  content: "";
+  background: #036564;
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  width: 0;
+  height: 0;
+  opacity: 0.2;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-transition: all 0.4s cubic-bezier(0.495, 1.415, 0.76, 1.035);
+  -moz-transition: all 0.4s cubic-bezier(0.495, 1.415, 0.76, 1.035);
+  -o-transition: all 0.4s cubic-bezier(0.495, 1.415, 0.76, 1.035);
+  -ms-transition: all 0.4s cubic-bezier(0.495, 1.415, 0.76, 1.035);
+  transition: all 0.4s cubic-bezier(0.495, 1.415, 0.76, 1.035);
+}
+calendar .week > span.day:hover {
+  background: #f1f1f1;
+}
+calendar .week > span.day:first-child {
+  border-left: none;
+}
+calendar .week > span.day.today {
+  background: #e3f2ff;
+}
+calendar .week > span.day.other_month {
+  color: #c0c0c0;
+}
+calendar .week > span.day.shrink {
+  opacity: 0;
+  width: 0 !important;
+  height: 0 !important;
+}
+calendar .week > span.day.selected {
+  background: transparent;
+  color: #fff;
+  border-left: 0;
+}
+calendar .week > span.day.selected:before {
+  content: "";
+  background: #0a516d;
+  position: absolute !important;
+  left: 0 !important;
+  top: 0% !important;
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -o-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  opacity: 1;
+}
+calendar .week > span.day.selected > span {
+  position: relative;
+}
+calendar .week > span.day.selected > .day_num {
+  color: #fff;
+}
+calendar .week > span.day >i {
+  position: absolute;
+  opacity: 0;
+  font-size: 0;
+  line-height: 0;
+  top: 0;
+  left: -999px;
+  color: transparent;
+  z-index: 100;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+calendar .week > span.day >i.ion-arrow-right-a {
+  left: auto;
+  right: -999px;
+}
+calendar .week > span.day > span {
+  line-height: 40px;
+  font-size: 13px;
+  -webkit-transition: font-size 0.6s cubic-bezier(0.495, 1.415, 0.76, 1.035), line-height 0.6s cubic-bezier(0.495, 1.415, 0.76, 1.035);
+  -moz-transition: font-size 0.6s cubic-bezier(0.495, 1.415, 0.76, 1.035), line-height 0.6s cubic-bezier(0.495, 1.415, 0.76, 1.035);
+  -o-transition: font-size 0.6s cubic-bezier(0.495, 1.415, 0.76, 1.035), line-height 0.6s cubic-bezier(0.495, 1.415, 0.76, 1.035);
+  -ms-transition: font-size 0.6s cubic-bezier(0.495, 1.415, 0.76, 1.035), line-height 0.6s cubic-bezier(0.495, 1.415, 0.76, 1.035);
+  transition: font-size 0.6s cubic-bezier(0.495, 1.415, 0.76, 1.035), line-height 0.6s cubic-bezier(0.495, 1.415, 0.76, 1.035);
+}
+calendar .week > span.day > .day_num {
+  display: block;
+  line-height: 32px;
+  height: 40px;
+  overflow: hidden;
+}
+calendar .week > span.day > .day_num > .day_event {
+  display: block;
+  height: 4px;
+  width: 80%;
+  font-size: 1px;
+  color: transparent;
+  position: relative;
+  margin-left: 10%;
+}
+calendar .week > span.day > .day_num > .day_event:before {
+  content: "";
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  width: 100%;
+  height: 100%;
+  background: #f1f1f1;
+}
+calendar .week > span.day > .day_num > .day_event:after {
+  content: "";
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  -ms-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 0;
+  opacity: 1;
+  height: 100%;
+  background: #f8a13f;
+}
+calendar .week > span.day > .day_num > .day_event.w1:after {
+  width: 33.33%;
+}
+calendar .week > span.day > .day_num > .day_event.w2:after {
+  width: 66.66%;
+}
+calendar .week > span.day > .day_num > .day_event.w3:after {
+  width: 100%;
+}
+calendar .week > span.day > .day_num > .day_event.event_title {
+  height: 30px;
+  font-size: 15px;
+  line-height: 26px;
+  color: #f8a13f;
+  width: 100%;
+  margin-left: 0;
+  background: rgba(10,81,109,0.5);
+}
+calendar .week > span.day > .day_num > .day_event.event_title:after {
+  background: transparent;
+  opacity: 0;
+}
+calendar .week > span.day > .day_num > .day_event.event_title:before {
+  background: transparent;
+}
+calendar .week > span.day.day_title {
+  display: block;
+  width: 100%;
+  font-size: 40px;
+  height: 90px;
+  text-shadow: 1px 1px rgba(0,0,0,0.4);
+  line-height: 60px !important;
+}
+calendar .week > span.day.day_title:before {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPjxwYXRoIGQ9Ik0tMiAxMEwxMCAtMlpNMTAgNkw2IDEwWk0tMiAyTDIgLTIiIHN0cm9rZT0iIzBBNTE2RCIgc3Ryb2tlLXdpZHRoPSI0LjUiPjwvcGF0aD4KPC9zdmc+"), url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgyPSIxIiB5Mj0iMSI+CjxzdG9wIHN0b3AtY29sb3I9IiM1QjUyN0YiPjwvc3RvcD4KPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDA1QkM1Ij48L3N0b3A+CjwvbGluZWFyR3JhZGllbnQ+CjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZykiPjwvcmVjdD4KPC9zdmc+");
+}
+calendar .week > span.day.day_title > .day_num {
+  line-height: 60px;
+  font-size: 40px;
+  height: 90px;
+}
+calendar .week > span.day.day_title >i {
+  position: absolute;
+  left: 10px;
+  font-size: 0;
+  line-height: 0;
+  top: 0;
+  color: #fff;
+  z-index: 100;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+/*transition-delay 0.6s*/
+  opacity: 0.8;
+}
+calendar .week > span.day.day_title >i:hover {
+  opacity: 1;
+}
+calendar .week > span.day.day_title >i.ion-arrow-right-a {
+  left: auto;
+  right: 10px;
+}
+calendar .week > span.day.day_title >i.active {
+  font-size: 30px;
+  line-height: 60px;
+}
+calendar .week.names {
+  opacity: 1;
+  height: 40px !important;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+calendar .week.names.shrink {
+  opacity: 0;
+  width: 0 !important;
+  height: 0 !important;
+}
+calendar .week.names > span {
+  color: #005bc5;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 40px !important;
+  background: #f5f5f5;
+}
+calendar .timebar {
+  float: left;
+  width: 100%;
+/*padding-top: 8px;*/
+  border-top: 2px solid;
+  background: #fff;
+  opacity: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.2s cubic-bezier(0.495, 1.415, 0.76, 1.035);
+  -moz-transition: all 0.2s cubic-bezier(0.495, 1.415, 0.76, 1.035);
+  -o-transition: all 0.2s cubic-bezier(0.495, 1.415, 0.76, 1.035);
+  -ms-transition: all 0.2s cubic-bezier(0.495, 1.415, 0.76, 1.035);
+  transition: all 0.2s cubic-bezier(0.495, 1.415, 0.76, 1.035);
+}
+calendar .timebar .hour {
+  float: left;
+  width: 100%;
+  display: block;
+  opacity: 0;
+  height: 0;
+  margin-top: -10px;
+  margin-left: -10px;
+  -webkit-transition: all 0.3s cubic-bezier(0.495, 1.415, 0.76, 1.035);
+  -moz-transition: all 0.3s cubic-bezier(0.495, 1.415, 0.76, 1.035);
+  -o-transition: all 0.3s cubic-bezier(0.495, 1.415, 0.76, 1.035);
+  -ms-transition: all 0.3s cubic-bezier(0.495, 1.415, 0.76, 1.035);
+  transition: all 0.3s cubic-bezier(0.495, 1.415, 0.76, 1.035);
+}
+calendar .timebar .hour .left {
+  width: 80px;
+  text-align: center;
+/*border-right: 1px solid #eee;*/
+/*background: #f5f5f5;*/
+  line-height: 30px;
+  vertical-align: middle;
+  height: 40px;
+  font-size: 13px;
+  float: left;
+  position: relative;
+}
+calendar .timebar .hour .left:before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  left: calc(50% - 1px);
+  background: rgba(0,102,255,0.6);
+}
+calendar .timebar .hour .left > span {
+  width: 30px;
+  display: block;
+  margin: 0 auto;
+  height: 30px;
+  line-height: 30px;
+  vertical-align: middle;
+  margin-top: 5px;
+  background: #ccc;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  text-align: center;
+  color: #fff;
+  font-size: 11px;
+  position: relative;
+}
+calendar .timebar .hour .left > span.active {
+  background: rgba(0,102,255,0.8);
+}
+calendar .timebar .hour .right {
+  display: flex;
+  border-bottom: 1px solid #eee;
+  height: 39px;
+  width: calc(100% - 81px);
+}
+calendar .timebar .hour.active {
+  height: 40px;
+  margin-left: 0;
+  opacity: 1;
+  margin-top: 0;
+  transition-delay: 0;
+}
+calendar .timebar.active {
+  opacity: 1;
+}
+calendar .timebar.ng-hide-add {
+  -webkit-animation: 0.4s slideInUp cubic-bezier(0.495, 1.415, 0.76, 1.035);
+  -moz-animation: 0.4s slideInUp cubic-bezier(0.495, 1.415, 0.76, 1.035);
+  -o-animation: 0.4s slideInUp cubic-bezier(0.495, 1.415, 0.76, 1.035);
+  -ms-animation: 0.4s slideInUp cubic-bezier(0.495, 1.415, 0.76, 1.035);
+  animation: 0.4s slideInUp cubic-bezier(0.495, 1.415, 0.76, 1.035);
+  opacity: 1;
+}
+@-webkit-keyframes color_change {
+  0% {
+    color: #61c155;
+  }
+  100% {
+    color: #f8a13f;
+  }
+}
+@-moz-keyframes color_change {
+  0% {
+    color: #61c155;
+  }
+  100% {
+    color: #f8a13f;
+  }
+}
+@-o-keyframes color_change {
+  0% {
+    color: #61c155;
+  }
+  100% {
+    color: #f8a13f;
+  }
+}
+@keyframes color_change {
+  0% {
+    color: #61c155;
+  }
+  100% {
+    color: #f8a13f;
+  }
+}
+@-webkit-keyframes loading_spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -ms-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-moz-keyframes loading_spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -ms-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-o-keyframes loading_spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -ms-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes loading_spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    -moz-transform: rotate(359deg);
+    -o-transform: rotate(359deg);
+    -ms-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
