@@ -475,11 +475,11 @@ calendar .timebar .hour {
   height: 0;
   margin-top: -10px;
   margin-left: -10px;
-  -webkit-transition: all 0.3s cubic-bezier(0.495, 1.415, 0.76, 1.035);
-  -moz-transition: all 0.3s cubic-bezier(0.495, 1.415, 0.76, 1.035);
-  -o-transition: all 0.3s cubic-bezier(0.495, 1.415, 0.76, 1.035);
-  -ms-transition: all 0.3s cubic-bezier(0.495, 1.415, 0.76, 1.035);
-  transition: all 0.3s cubic-bezier(0.495, 1.415, 0.76, 1.035);
+  -webkit-transition: all 0.2s cubic-bezier(0.495, 1.415, 0.76, 1.035);
+  -moz-transition: all 0.2s cubic-bezier(0.495, 1.415, 0.76, 1.035);
+  -o-transition: all 0.2s cubic-bezier(0.495, 1.415, 0.76, 1.035);
+  -ms-transition: all 0.2s cubic-bezier(0.495, 1.415, 0.76, 1.035);
+  transition: all 0.2s cubic-bezier(0.495, 1.415, 0.76, 1.035);
 }
 calendar .timebar .hour.active-remove {
   transition-delay: none !important;
@@ -544,11 +544,11 @@ calendar .timebar.active {
   opacity: 1;
 }
 calendar .timebar.ng-hide-add {
-  -webkit-animation: 0.4s slideInUp cubic-bezier(0.495, 1.415, 0.76, 1.035);
-  -moz-animation: 0.4s slideInUp cubic-bezier(0.495, 1.415, 0.76, 1.035);
-  -o-animation: 0.4s slideInUp cubic-bezier(0.495, 1.415, 0.76, 1.035);
-  -ms-animation: 0.4s slideInUp cubic-bezier(0.495, 1.415, 0.76, 1.035);
-  animation: 0.4s slideInUp cubic-bezier(0.495, 1.415, 0.76, 1.035);
+  -webkit-animation: 0.3s slideInUp cubic-bezier(0.495, 1.415, 0.76, 1.035);
+  -moz-animation: 0.3s slideInUp cubic-bezier(0.495, 1.415, 0.76, 1.035);
+  -o-animation: 0.3s slideInUp cubic-bezier(0.495, 1.415, 0.76, 1.035);
+  -ms-animation: 0.3s slideInUp cubic-bezier(0.495, 1.415, 0.76, 1.035);
+  animation: 0.3s slideInUp cubic-bezier(0.495, 1.415, 0.76, 1.035);
   opacity: 1;
 }
 calendar .timebar .fullday_wrap {
