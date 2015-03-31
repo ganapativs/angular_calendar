@@ -117,7 +117,7 @@
 
 
     /*
-    * Basic Angular calender Code - Inspired from https://www.codementor.io/angularjs/tutorial/angularjs-calendar-directives-less-cess-moment-font-awesome
+    * Core Angular calender Code - Inspired from https://www.codementor.io/angularjs/tutorial/angularjs-calendar-directives-less-cess-moment-font-awesome
     * Customized for calender with day view
     * */
     app.directive("calendar", function() {

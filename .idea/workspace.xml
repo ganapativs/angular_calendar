@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd320af7-032b-4c0c-95d3-c24d1ef0cb79" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/calendar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core.css" afterPath="$PROJECT_DIR$/core.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core.styl" afterPath="$PROJECT_DIR$/core.styl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="angular_calender.iws" />
@@ -50,10 +47,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="core.styl" pinned="false" current-in-tab="true">
+      <file leaf-file-name="core.styl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core.styl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.22296543" vertical-offset="9184" max-vertical-offset="10523">
+            <state vertical-scroll-proportion="0.0" vertical-offset="9184" max-vertical-offset="10523">
               <caret line="548" column="73" selection-start-line="548" selection-start-column="73" selection-end-line="548" selection-end-column="73" />
               <folding>
                 <element signature="e#8183#8424#2" expanded="true" />
@@ -63,19 +60,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1771" max-vertical-offset="6885">
-              <caret line="126" column="33" selection-start-line="126" selection-start-column="33" selection-end-line="126" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.61761427" vertical-offset="1469" max-vertical-offset="4284">
+              <caret line="119" column="10" selection-start-line="119" selection-start-column="10" selection-end-line="119" selection-end-column="10" />
               <folding>
-                <element signature="e#5571#6034#0" expanded="false" />
-                <element signature="e#6082#6429#0" expanded="false" />
-                <element signature="e#6964#7942#0" expanded="false" />
-                <element signature="e#8008#8970#0" expanded="false" />
-                <element signature="e#9285#9377#0" expanded="false" />
-                <element signature="e#9427#9825#0" expanded="false" />
-                <element signature="e#9872#10372#0" expanded="false" />
+                <element signature="e#4176#14160#0" expanded="false" />
+                <element signature="e#4445#9237#0" expanded="false" />
+                <element signature="e#5570#6033#0" expanded="false" />
+                <element signature="e#6081#6428#0" expanded="false" />
+                <element signature="e#6963#7941#0" expanded="false" />
+                <element signature="e#8007#8969#0" expanded="false" />
+                <element signature="e#9284#9376#0" expanded="false" />
+                <element signature="e#9426#9824#0" expanded="false" />
+                <element signature="e#9871#10371#0" expanded="false" />
+                <element signature="e#10439#14154#0" expanded="false" />
+                <element signature="e#14204#14690#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -90,10 +91,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/core.css" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/calendar.html" />
         <option value="$PROJECT_DIR$/core.styl" />
+        <option value="$PROJECT_DIR$/app.js" />
       </list>
     </option>
   </component>
@@ -145,20 +146,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="angular_calender" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular_calender" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="angular_calender" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="core.styl" />
-              <option name="myItemType" value="com.intellij.plugins.watcher.projectView.NestingTreeNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -245,7 +232,13 @@
       <option name="project" value="LOCAL" />
       <updated>1427841486169</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Seperated template">
+      <created>1427842296960</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1427842296961</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -311,7 +304,8 @@
     <MESSAGE value="Added fullday events UI and Logic" />
     <MESSAGE value="Added events listing by hour" />
     <MESSAGE value="Animations fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Animations fixed" />
+    <MESSAGE value="Seperated template" />
+    <option name="LAST_COMMIT_MESSAGE" value="Seperated template" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -327,22 +321,6 @@
           <folding>
             <element signature="e#10415#10656#1" expanded="false" />
             <element signature="e#10658#11051#1" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1771" max-vertical-offset="6885">
-          <caret line="126" column="33" selection-start-line="126" selection-start-column="33" selection-end-line="126" selection-end-column="33" />
-          <folding>
-            <element signature="e#5571#6034#0" expanded="false" />
-            <element signature="e#6082#6429#0" expanded="false" />
-            <element signature="e#6964#7942#0" expanded="false" />
-            <element signature="e#8008#8970#0" expanded="false" />
-            <element signature="e#9285#9377#0" expanded="false" />
-            <element signature="e#9427#9825#0" expanded="false" />
-            <element signature="e#9872#10372#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -365,11 +343,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/core.styl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22296543" vertical-offset="9184" max-vertical-offset="10523">
+        <state vertical-scroll-proportion="0.0" vertical-offset="9184" max-vertical-offset="10523">
           <caret line="548" column="73" selection-start-line="548" selection-start-column="73" selection-end-line="548" selection-end-column="73" />
           <folding>
             <element signature="e#8183#8424#2" expanded="true" />
             <element signature="e#8425#8818#2" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.61761427" vertical-offset="1469" max-vertical-offset="4284">
+          <caret line="119" column="10" selection-start-line="119" selection-start-column="10" selection-end-line="119" selection-end-column="10" />
+          <folding>
+            <element signature="e#4176#14160#0" expanded="false" />
+            <element signature="e#4445#9237#0" expanded="false" />
+            <element signature="e#5570#6033#0" expanded="false" />
+            <element signature="e#6081#6428#0" expanded="false" />
+            <element signature="e#6963#7941#0" expanded="false" />
+            <element signature="e#8007#8969#0" expanded="false" />
+            <element signature="e#9284#9376#0" expanded="false" />
+            <element signature="e#9426#9824#0" expanded="false" />
+            <element signature="e#9871#10371#0" expanded="false" />
+            <element signature="e#10439#14154#0" expanded="false" />
+            <element signature="e#14204#14690#0" expanded="false" />
           </folding>
         </state>
       </provider>
