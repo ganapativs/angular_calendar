@@ -481,6 +481,9 @@ calendar .timebar .hour {
   -ms-transition: all 0.3s cubic-bezier(0.495, 1.415, 0.76, 1.035);
   transition: all 0.3s cubic-bezier(0.495, 1.415, 0.76, 1.035);
 }
+calendar .timebar .hour.active-remove {
+  transition-delay: none !important;
+}
 calendar .timebar .hour .left {
   width: 80px;
   text-align: center;
@@ -632,6 +635,16 @@ calendar .timebar .hour .right .right_event_flex {
   display: block;
   height: 39px;
   border-right: 1px solid #eee;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  -webkit-box-shadow: inset 0px 0px 50px 0px rgba(255,255,255,0.15);
+  -moz-box-shadow: inset 0px 0px 50px 0px rgba(255,255,255,0.15);
+  -o-box-shadow: inset 0px 0px 50px 0px rgba(255,255,255,0.15);
+  -ms-box-shadow: inset 0px 0px 50px 0px rgba(255,255,255,0.15);
+  box-shadow: inset 0px 0px 50px 0px rgba(255,255,255,0.15);
   position: relative;
 }
 calendar .timebar .hour .right .right_event_flex > .name {
@@ -678,6 +691,11 @@ calendar .timebar .hour .right .right_event_flex .black_bg {
 }
 calendar .timebar .hour .right .right_event_flex:hover {
   cursor: pointer;
+  -webkit-box-shadow: inset 0px 0px 0px 0px rgba(255,255,255,0.5);
+  -moz-box-shadow: inset 0px 0px 0px 0px rgba(255,255,255,0.5);
+  -o-box-shadow: inset 0px 0px 0px 0px rgba(255,255,255,0.5);
+  -ms-box-shadow: inset 0px 0px 0px 0px rgba(255,255,255,0.5);
+  box-shadow: inset 0px 0px 0px 0px rgba(255,255,255,0.5);
   background: #ad00ab !important;
 }
 calendar .timebar .hour .right .right_event_flex:hover > .name {

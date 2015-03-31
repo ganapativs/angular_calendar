@@ -420,6 +420,8 @@ calendar
       margin-top -10px
       margin-left: -10px;
       transition all 0.3s anim_func
+      &.active-remove
+        transition-delay none !important
       .left
         width: 80px;
         text-align: center;
@@ -543,6 +545,8 @@ calendar
             display block
             height: 39px;
             border-right: 1px solid #eee;
+            transition all 0.2s ease
+            box-shadow: inset 0px 0px 50px 0px rgba(255, 255, 255, 0.15);
             position relative
             > .name
               display block
@@ -575,6 +579,7 @@ calendar
               opacity 0.4
             &:hover
               cursor pointer
+              box-shadow: inset 0px 0px 0px 0px rgba(255, 255, 255, 0.5);
               background: #AD00AB !important;
               > .name
                 color: #fff;

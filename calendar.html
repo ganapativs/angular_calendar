@@ -1,0 +1,79 @@
+<!--Calender angular template-->
+<div class="ng_calender">
+    <div class="header" ng-class="{'shrink':currentDate}">
+        <i class="ion-arrow-left-b" ng-click="previous()"></i>
+        <span><span class="ion-calendar"></span> {{month.format("MMMM, YYYY")}}</span>
+        <i class="ion-arrow-right-b" ng-click="next()"></i>
+    </div>
+    <div class="week names"
+         ng-class="{'shrink':currentDate}"
+         ng-hide="currentDate">
+        <span class="day">Sun</span>
+        <span class="day">Mon</span>
+        <span class="day">Tue</span>
+        <span class="day">Wed</span>
+        <span class="day">Thu</span>
+        <span class="day">Fri</span>
+        <span class="day">Sat</span>
+    </div>
+    <div class="week"
+         ng-repeat="week in weeks  track by $index"
+         ng-class="{'shrink':currentDate}"
+         ng-init="track=$index">
+            <span class="day"
+                  ng-class="{ today: day.isToday, 'other_month': !day.isCurrentMonth, selected: day.date.isSame(selected), 'shrink':currentDate&&day!=currentDate, 'day_title': day==currentDate}"
+                  ng-click="(!day.isCurrentMonth&&day.number<7&&select(day)&&next(1))||(!day.isCurrentMonth&&day.number>21&&select(day)&&previous(1))||select(day); $event.stopPropagation();"
+                  ng-hide="currentDate&&day!=currentDate"
+                  ng-repeat="day in week.days track by $index">
+                <i class="ion-arrow-left-a"
+                   ng-show="day==currentDate"
+                   ng-class="{'active':day==currentDate}"
+                   ng-click="$event.stopPropagation();prevday(day,$index,weeks,track);"></i>  <!--prev date-->
+                <span ng-class="{day_num:eventsList[day.date.format('DD-MM-YYYY')].length || day==currentDate}">
+                    {{day.number}}
+                    <!--show event counts only when clicked-->
+                    <span class="day_event" ng-if="eventsList[day.date.format('DD-MM-YYYY')].length || day==currentDate" ng-class="{'w1': eventsList[day.date.format('DD-MM-YYYY')].length==1,'w2':eventsList[day.date.format('DD-MM-YYYY')].length==2,'w3':eventsList[day.date.format('DD-MM-YYYY')].length>=3,  'event_title': day==currentDate}">
+                        <i class="ion-clock"></i> {{ eventsList[day.date.format('DD-MM-YYYY')].length | inWords | capitalize }} event{{(eventsList[day.date.format('DD-MM-YYYY')].length>=2&&'s')||''}} {{ day.isToday&&'today' || '' }}
+                    </span>
+                </span>
+                <i class="ion-arrow-right-a"
+                   ng-show="day==currentDate"
+                   ng-class="{'active':day==currentDate}"
+                   ng-click=" $event.stopPropagation();nextday(day,$index,weeks,track);"></i>  <!--next date-->
+            </span>
+    </div>
+    <div class="timebar"
+         ng-show="currentDate"
+         ng-class="{'active':currentDate}">
+        <div class="fullday_wrap"
+             ng-repeat="full in eventsList[formatted] | filter: fulldayCheck track by $index"
+             ng-if="full.fullday"
+             ng-show="currentDate">
+            <div class="fullday_title" ng-if="$first">
+                <i class="ion-ios-gear-outline"></i> Fullday events
+            </div>
+            <div class="hour fullday"
+                 ng-class="{'active':currentDate}">
+                <!--<div class="black_bg" ng-style="{'background':full.color}"></div>-->
+                    <span>
+                        <i class="ion-ios-star"></i> {{ full.name }}
+                    </span>
+            </div>
+        </div>
+        <div class="hour"
+             ng-repeat="h in hours track by $index"
+             ng-class="{'active':currentDate,'noevent':(eventsList[formatted] | filter: nonfulldayCheck | eventForHour:h).length==0}"
+             ng-style="transition($index)" ng-init="eventTracker=1">
+            <div class="left"><span>{{(h+11)%12+1}}<small>{{ (h<12)&&'AM'||(h>=12)&&'PM'  }}</small></span></div>
+            <div class="right">
+                <div ng-repeat="event in eventsList[formatted] | filter: nonfulldayCheck | eventForHour:h track by $index">
+                    <div class="right_event_flex" ng-style="{'background':event.color}">
+                        <div class="black_bg"></div>
+                        <span class="name">{{ event.name }}</span>
+                        <span class="time">{{ event.start }}-{{ event.end }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
