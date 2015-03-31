@@ -6,7 +6,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core.css" afterPath="$PROJECT_DIR$/core.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core.styl" afterPath="$PROJECT_DIR$/core.styl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="angular_calender.iws" />
@@ -31,11 +30,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.66819745" vertical-offset="1407" max-vertical-offset="2278">
-              <caret line="117" column="55" selection-start-line="117" selection-start-column="55" selection-end-line="117" selection-end-column="55" />
+            <state vertical-scroll-proportion="-17.153847" vertical-offset="1407" max-vertical-offset="2380">
+              <caret line="109" column="26" selection-start-line="109" selection-start-column="26" selection-end-line="109" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -44,8 +43,8 @@
       <file leaf-file-name="core.styl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core.styl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="7926" max-vertical-offset="9129">
-              <caret line="506" column="27" selection-start-line="506" selection-start-column="27" selection-end-line="506" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="8096" max-vertical-offset="10370">
+              <caret line="502" column="17" selection-start-line="502" selection-start-column="17" selection-end-line="502" selection-end-column="17" />
               <folding>
                 <element signature="e#8183#8424#2" expanded="true" />
                 <element signature="e#8425#8818#2" expanded="true" />
@@ -54,20 +53,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2230" max-vertical-offset="6273">
-              <caret line="212" column="34" selection-start-line="212" selection-start-column="22" selection-end-line="212" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.2956044" vertical-offset="2536" max-vertical-offset="6885">
+              <caret line="179" column="70" selection-start-line="179" selection-start-column="70" selection-end-line="179" selection-end-column="70" />
               <folding>
-                <element signature="e#5274#5737#0" expanded="false" />
-                <element signature="e#5785#6132#0" expanded="false" />
-                <element signature="e#6459#6601#0" expanded="false" />
-                <element signature="e#6667#7645#0" expanded="false" />
-                <element signature="e#7711#8673#0" expanded="false" />
-                <element signature="e#8860#8952#0" expanded="false" />
-                <element signature="e#9002#9400#0" expanded="false" />
-                <element signature="e#9447#9947#0" expanded="false" />
+                <element signature="e#5571#6034#0" expanded="false" />
+                <element signature="e#6082#6429#0" expanded="false" />
+                <element signature="e#6964#7942#0" expanded="false" />
+                <element signature="e#8008#8970#0" expanded="false" />
+                <element signature="e#9285#9377#0" expanded="false" />
+                <element signature="e#9427#9825#0" expanded="false" />
+                <element signature="e#9872#10372#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -82,9 +80,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/core.css" />
-        <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/core.styl" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/core.styl" />
+        <option value="$PROJECT_DIR$/app.js" />
       </list>
     </option>
   </component>
@@ -212,12 +210,20 @@
       <option name="number" value="Default" />
       <updated>1427559616081</updated>
     </task>
+    <task id="LOCAL-00001" summary="Added fullday events UI and Logic">
+      <created>1427832468853</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1427832468853</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -273,6 +279,8 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
+    <MESSAGE value="Added fullday events UI and Logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added fullday events UI and Logic" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -292,27 +300,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2230" max-vertical-offset="6273">
-          <caret line="212" column="34" selection-start-line="212" selection-start-column="22" selection-end-line="212" selection-end-column="34" />
-          <folding>
-            <element signature="e#5274#5737#0" expanded="false" />
-            <element signature="e#5785#6132#0" expanded="false" />
-            <element signature="e#6459#6601#0" expanded="false" />
-            <element signature="e#6667#7645#0" expanded="false" />
-            <element signature="e#7711#8673#0" expanded="false" />
-            <element signature="e#8860#8952#0" expanded="false" />
-            <element signature="e#9002#9400#0" expanded="false" />
-            <element signature="e#9447#9947#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core.styl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="7926" max-vertical-offset="9129">
-          <caret line="506" column="27" selection-start-line="506" selection-start-column="27" selection-end-line="506" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="8096" max-vertical-offset="10370">
+          <caret line="502" column="17" selection-start-line="502" selection-start-column="17" selection-end-line="502" selection-end-column="17" />
           <folding>
             <element signature="e#8183#8424#2" expanded="true" />
             <element signature="e#8425#8818#2" expanded="true" />
@@ -322,9 +313,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66819745" vertical-offset="1407" max-vertical-offset="2278">
-          <caret line="117" column="55" selection-start-line="117" selection-start-column="55" selection-end-line="117" selection-end-column="55" />
+        <state vertical-scroll-proportion="-17.153847" vertical-offset="1407" max-vertical-offset="2380">
+          <caret line="109" column="26" selection-start-line="109" selection-start-column="26" selection-end-line="109" selection-end-column="26" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2956044" vertical-offset="2536" max-vertical-offset="6885">
+          <caret line="179" column="70" selection-start-line="179" selection-start-column="70" selection-end-line="179" selection-end-column="70" />
+          <folding>
+            <element signature="e#5571#6034#0" expanded="false" />
+            <element signature="e#6082#6429#0" expanded="false" />
+            <element signature="e#6964#7942#0" expanded="false" />
+            <element signature="e#8008#8970#0" expanded="false" />
+            <element signature="e#9285#9377#0" expanded="false" />
+            <element signature="e#9427#9825#0" expanded="false" />
+            <element signature="e#9872#10372#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

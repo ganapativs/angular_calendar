@@ -80,14 +80,25 @@
                 }
             },
             {
+                name:"Data Conference",
+                start:{
+                    date:"29-03-2015",
+                    time:"06:30"
+                },
+                end:{
+                    date:"29-03-2015",
+                    time:"10:30"
+                }
+            },
+            {
                 name:"Kenn Conference",
                 start:{
                     date:"29-03-2015",
-                    time:"2:30"
+                    time:"18:30"
                 },
                 end:{
                     date:"05-04-2015",
-                    time:"23:30"
+                    time:"22:30"
                 }
             },
             {
@@ -166,7 +177,7 @@
 
                 scope.transition= function (index) {
                     return {
-                        'transition-delay':100+(500/23)*(index) + 'ms'
+                        'transition-delay':100+(400/23)*(index) + 'ms'
                     };
                 };
 
@@ -212,6 +223,10 @@
 
                 scope.fulldayCheck = function (item) {
                     return item.fullday === true;
+                };
+
+                scope.nonfulldayCheck = function (item) {
+                    return item.fullday !== true;
                 };
             }
         };
@@ -263,7 +278,7 @@
                     x.name=events[i].name;
                     x.fullday=false;
                     x.color=Please.make_color({
-                        base_color: 'lawngreen' //set your base color
+                        base_color: 'rebeccapurple' //set your base color
                     });
                     _events[start].push(x);
                 }
@@ -276,11 +291,11 @@
                                     _events[start]=[];
                                 x={};
                                 x.start= events[i].start.time;
-                                x.end= '23:99';
+                                x.end= '23:59';
                                 x.name=events[i].name;
                                 x.fullday=false;
                                 x.color=Please.make_color({
-                                    base_color: 'lawngreen' //set your base color
+                                    base_color: 'rebeccapurple' //set your base color
                                 });
                                 _events[start].push(x);
                             }
@@ -295,7 +310,7 @@
                                     x.name=events[i].name;
                                     x.fullday=false;
                                     x.color=Please.make_color({
-                                        base_color: 'lawngreen' //set your base color
+                                        base_color: 'rebeccapurple' //set your base color
                                     });
                                     _events[start].push(x);
                                 }
@@ -305,11 +320,11 @@
                                         _events[start]=[];
                                     x={};
                                     x.start= '00:00';
-                                    x.end= '23:99';
+                                    x.end= '23:59';
                                     x.name=events[i].name;
                                     x.fullday=true;
                                     x.color=Please.make_color({
-                                        base_color: 'lawngreen' //set your base color
+                                        base_color: 'rebeccapurple' //set your base color
                                     });
                                     _events[start].push(x);
                                 }
@@ -320,6 +335,23 @@
             console.log(_events);
         }
     });
+
+    app.filter("eventForHour",function(){
+        return function(event,num){
+            var x=[];
+            angular.forEach(event, function (e,i) {
+                var start_split= e.start.split(':');
+                var end_split= e.end.split(':');
+                //console.log(start_split,end_split,num)
+                if(num>=parseInt(start_split[0])&&num<=parseInt(end_split[0])){
+                    x.push(e);
+                }
+            });
+            //console.log(x,num)
+            return x;
+        }
+    });
+
 })();
 
 /*

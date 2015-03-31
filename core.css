@@ -502,21 +502,22 @@ calendar .timebar .hour .left:before {
   background: rgba(0,102,255,0.6);
 }
 calendar .timebar .hour .left > span {
-  width: 30px;
+  width: 28px;
   display: block;
   margin: 0 auto;
-  height: 30px;
-  line-height: 30px;
+  height: 28px;
+  line-height: 28px;
   vertical-align: middle;
   margin-top: 5px;
-  background: #ccc;
+  background: #eee;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -o-border-radius: 50%;
   -ms-border-radius: 50%;
   border-radius: 50%;
   text-align: center;
-  color: #fff;
+  color: #0a516d;
+  border: 1px solid #e5e5e5;
   font-size: 11px;
   position: relative;
 }
@@ -563,12 +564,12 @@ calendar .timebar .fullday_wrap {
 calendar .timebar .fullday_wrap .fullday_title {
   line-height: 30px;
   background: #00ae80;
-  background: -moz-radial-gradient(center, ellipse cover, #00ae80 0%, #008562 100%);
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #00ae80), color-stop(100%, #008562));
-  background: -webkit-radial-gradient(center, ellipse cover, #00ae80 0%, #008562 100%);
-  background: -o-radial-gradient(center, ellipse cover, #00ae80 0%, #008562 100%);
-  background: -ms-radial-gradient(center, ellipse cover, #00ae80 0%, #008562 100%);
-  background: radial-gradient(ellipse at center, #00ae80 0%, #008562 100%);
+  background: -moz-radial-gradient(center, ellipse cover, #00ae80 0%, #00b384 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #00ae80), color-stop(100%, #00b384));
+  background: -webkit-radial-gradient(center, ellipse cover, #00ae80 0%, #00b384 100%);
+  background: -o-radial-gradient(center, ellipse cover, #00ae80 0%, #00b384 100%);
+  background: -ms-radial-gradient(center, ellipse cover, #00ae80 0%, #00b384 100%);
+  background: radial-gradient(ellipse at center, #00ae80 0%, #00b384 100%);
   color: #fff;
   font-size: 14px;
 }
@@ -578,6 +579,8 @@ calendar .timebar .fullday_wrap .fullday {
   text-align: left;
   padding: 0 20%;
   width: 61%;
+  background: #eee;
+  border-bottom: 1px solid #ddd;
 }
 calendar .timebar .fullday_wrap .fullday .black_bg {
   position: absolute !important;
@@ -595,6 +598,97 @@ calendar .timebar .fullday_wrap .fullday > span {
 }
 calendar .timebar .fullday_wrap .fullday > span > i {
   padding-right: 5px;
+}
+calendar .timebar .hour.noevent {
+  height: 20px;
+  -webkit-transition: all 0.3s cubic-bezier(0.495, 1.415, 0.76, 1.035);
+  -moz-transition: all 0.3s cubic-bezier(0.495, 1.415, 0.76, 1.035);
+  -o-transition: all 0.3s cubic-bezier(0.495, 1.415, 0.76, 1.035);
+  -ms-transition: all 0.3s cubic-bezier(0.495, 1.415, 0.76, 1.035);
+  transition: all 0.3s cubic-bezier(0.495, 1.415, 0.76, 1.035);
+}
+calendar .timebar .hour.noevent .left {
+  height: 20px;
+}
+calendar .timebar .hour.noevent .left:before {
+  background: #ddd;
+}
+calendar .timebar .hour.noevent .left span {
+  height: 20px;
+  margin-top: 0px;
+  line-height: 18px;
+  background: #fff;
+  border: none;
+  color: #aaa;
+}
+calendar .timebar .hour.noevent .right {
+  height: 19px;
+}
+calendar .timebar .hour .right {
+  display: flex;
+}
+calendar .timebar .hour .right > div {
+  flex: 1;
+}
+calendar .timebar .hour .right .right_event_flex {
+  display: block;
+  height: 39px;
+  border-right: 1px solid #eee;
+  position: relative;
+}
+calendar .timebar .hour .right .right_event_flex > .name {
+  display: block;
+  width: 100%;
+  font-size: 12px;
+  line-height: 40px;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  color: rgba(255,255,255,0.75);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  text-overflow: ellipsis;
+}
+calendar .timebar .hour .right .right_event_flex > .time {
+  display: block;
+  width: 100%;
+  font-size: 0;
+  opacity: 0;
+  line-height: 20px;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  text-overflow: ellipsis;
+  color: #bbb;
+}
+calendar .timebar .hour .right .right_event_flex .black_bg {
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 100%;
+  height: 100%;
+  background: #069;
+  opacity: 0.4;
+}
+calendar .timebar .hour .right .right_event_flex:hover {
+  cursor: pointer;
+  background: #ad00ab !important;
+}
+calendar .timebar .hour .right .right_event_flex:hover > .name {
+  color: #fff;
+  line-height: 20px;
+}
+calendar .timebar .hour .right .right_event_flex:hover > .time {
+  font-size: 11px;
+  opacity: 1;
 }
 @-webkit-keyframes color_change {
   0% {
