@@ -37,6 +37,7 @@
             .queueScript('//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.12/angular-animate.min.js')
             .queueScript('http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-touch.min.js')
             .queueScript('moment.min.js')
+            .queueScript('http://www.checkman.io/please/js/Please-compressed.js')
             .queueWait()
             .queueScript('app.js')
             .queueWait(function(){
@@ -96,15 +97,29 @@
         <div class="timebar"
                      ng-show="currentDate"
                      ng-class="{'active':currentDate}">
-            <div class="hour" ng-class="{'active':currentDate}">
-                <!--<span>{{ eventsList[formatted] }}</span>-->
+            <div class="fullday_wrap"
+                         ng-repeat="full in eventsList[formatted] | filter: fulldayCheck track by $index"
+                         ng-if="full.fullday"
+                         ng-show="currentDate">
+                <div class="fullday_title" ng-if="$first">
+                    <i class="ion-ios-gear-outline"></i> Fullday events
+                </div>
+                <div class="hour fullday"
+                     ng-class="{'active':currentDate}">
+                    <div class="black_bg" ng-style="{'background':full.color}"></div>
+                    <span>
+                        <i class="ion-ios-star"></i> {{ full.name }}
+                    </span>
+                </div>
             </div>
             <div class="hour"
                          ng-repeat="h in hours track by $index"
                          ng-class="{'active':currentDate}"
                          ng-style="transition($index)">
                 <div class="left"><span>{{(h+11)%12+1}}<small>{{ (h<12)&&'AM'||(h>=12)&&'PM'  }}</small></span></div>
-                <div class="right"></div>
+                <div class="right">
+
+                </div>
             </div>
         </div>
     </div>

@@ -47,6 +47,17 @@
         //Get events from http request whenever required, end date >= start date and time in 24hr format
         vm.events=[
             {
+                name:"Finish Programming course",
+                start:{
+                    date:"28-03-2015",
+                    time:"23:30"
+                },
+                end:{
+                    date:"31-03-2015",
+                    time:"0:30"
+                }
+            },
+            {
                 name:"Go to swimming",
                 start:{
                     date:"29-03-2015",
@@ -75,7 +86,7 @@
                     time:"2:30"
                 },
                 end:{
-                    date:"31-03-2015",
+                    date:"05-04-2015",
                     time:"23:30"
                 }
             },
@@ -198,6 +209,10 @@
                         });
                     },0);
                 };
+
+                scope.fulldayCheck = function (item) {
+                    return item.fullday === true;
+                };
             }
         };
 
@@ -247,6 +262,9 @@
                     x.end= events[i].end.time;
                     x.name=events[i].name;
                     x.fullday=false;
+                    x.color=Please.make_color({
+                        base_color: 'lawngreen' //set your base color
+                    });
                     _events[start].push(x);
                 }
                 else
@@ -261,6 +279,9 @@
                                 x.end= '23:99';
                                 x.name=events[i].name;
                                 x.fullday=false;
+                                x.color=Please.make_color({
+                                    base_color: 'lawngreen' //set your base color
+                                });
                                 _events[start].push(x);
                             }
                             else
@@ -273,6 +294,9 @@
                                     x.end= events[i].end.time;
                                     x.name=events[i].name;
                                     x.fullday=false;
+                                    x.color=Please.make_color({
+                                        base_color: 'lawngreen' //set your base color
+                                    });
                                     _events[start].push(x);
                                 }
                                 else{
@@ -284,6 +308,9 @@
                                     x.end= '23:99';
                                     x.name=events[i].name;
                                     x.fullday=true;
+                                    x.color=Please.make_color({
+                                        base_color: 'lawngreen' //set your base color
+                                    });
                                     _events[start].push(x);
                                 }
                         }
