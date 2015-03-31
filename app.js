@@ -177,7 +177,7 @@
 
                 scope.transition= function (index) {
                     return {
-                        'transition-delay':100+(400/23)*(index) + 'ms'
+                        'transition-delay':100+(600/23)*(index) + 'ms'
                     };
                 };
 

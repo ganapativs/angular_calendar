@@ -223,11 +223,11 @@ calendar .week > span.day {
   -o-box-shadow: 0px 1px 2px #f5f5f5 inset;
   -ms-box-shadow: 0px 1px 2px #f5f5f5 inset;
   box-shadow: 0px 1px 2px #f5f5f5 inset;
-  -webkit-transition: all 0.6s ease-in-out;
-  -moz-transition: all 0.6s ease-in-out;
-  -o-transition: all 0.6s ease-in-out;
-  -ms-transition: all 0.6s ease-in-out;
-  transition: all 0.6s ease-in-out;
+  -webkit-transition: all 0.7s cubic-bezier(0.33, 0.215, 0, 1);
+  -moz-transition: all 0.7s cubic-bezier(0.33, 0.215, 0, 1);
+  -o-transition: all 0.7s cubic-bezier(0.33, 0.215, 0, 1);
+  -ms-transition: all 0.7s cubic-bezier(0.33, 0.215, 0, 1);
+  transition: all 0.7s cubic-bezier(0.33, 0.215, 0, 1);
 }
 calendar .week > span.day:before {
   content: "";
@@ -600,12 +600,7 @@ calendar .timebar .fullday_wrap .fullday > span > i {
   padding-right: 5px;
 }
 calendar .timebar .hour.noevent {
-  height: 20px;
-  -webkit-transition: all 0.3s cubic-bezier(0.495, 1.415, 0.76, 1.035);
-  -moz-transition: all 0.3s cubic-bezier(0.495, 1.415, 0.76, 1.035);
-  -o-transition: all 0.3s cubic-bezier(0.495, 1.415, 0.76, 1.035);
-  -ms-transition: all 0.3s cubic-bezier(0.495, 1.415, 0.76, 1.035);
-  transition: all 0.3s cubic-bezier(0.495, 1.415, 0.76, 1.035);
+  height: 0;
 }
 calendar .timebar .hour.noevent .left {
   height: 20px;
@@ -623,6 +618,9 @@ calendar .timebar .hour.noevent .left span {
 }
 calendar .timebar .hour.noevent .right {
   height: 19px;
+}
+calendar .timebar.active .hour.noevent {
+  height: 20px;
 }
 calendar .timebar .hour .right {
   display: flex;

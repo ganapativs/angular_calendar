@@ -5,7 +5,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core.css" afterPath="$PROJECT_DIR$/core.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core.styl" afterPath="$PROJECT_DIR$/core.styl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="angular_calender.iws" />
@@ -33,31 +32,31 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.153847" vertical-offset="1407" max-vertical-offset="2380">
-              <caret line="109" column="26" selection-start-line="109" selection-start-column="26" selection-end-line="109" selection-end-column="26" />
+            <state vertical-scroll-proportion="-20.423077" vertical-offset="1152" max-vertical-offset="2380">
+              <caret line="99" column="12" selection-start-line="99" selection-start-column="12" selection-end-line="99" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="core.styl" pinned="false" current-in-tab="false">
+      <file leaf-file-name="core.styl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core.styl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="8096" max-vertical-offset="10370">
-              <caret line="502" column="17" selection-start-line="502" selection-start-column="17" selection-end-line="502" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.6399108" vertical-offset="3710" max-vertical-offset="10421">
+              <caret line="252" column="24" selection-start-line="252" selection-start-column="24" selection-end-line="252" selection-end-column="24" />
               <folding>
-                <element signature="e#8183#8424#2" expanded="true" />
-                <element signature="e#8425#8818#2" expanded="true" />
+                <element signature="e#8212#8453#2" expanded="true" />
+                <element signature="e#8454#8847#2" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2956044" vertical-offset="2536" max-vertical-offset="6885">
-              <caret line="179" column="70" selection-start-line="179" selection-start-column="70" selection-end-line="179" selection-end-column="70" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2332" max-vertical-offset="6885">
+              <caret line="179" column="49" selection-start-line="179" selection-start-column="49" selection-end-line="179" selection-end-column="49" />
               <folding>
                 <element signature="e#5571#6034#0" expanded="false" />
                 <element signature="e#6082#6429#0" expanded="false" />
@@ -81,8 +80,8 @@
       <list>
         <option value="$PROJECT_DIR$/core.css" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/core.styl" />
         <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/core.styl" />
       </list>
     </option>
   </component>
@@ -216,7 +215,13 @@
       <option name="project" value="LOCAL" />
       <updated>1427832468853</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added events listing by hour">
+      <created>1427840051435</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1427840051435</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -280,7 +285,8 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="Added fullday events UI and Logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added fullday events UI and Logic" />
+    <MESSAGE value="Added events listing by hour" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added events listing by hour" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -294,35 +300,24 @@
         <state vertical-scroll-proportion="1.4182016" vertical-offset="6494" max-vertical-offset="11067">
           <caret line="459" column="1" selection-start-line="459" selection-start-column="1" selection-end-line="459" selection-end-column="1" />
           <folding>
-            <element signature="e#10415#10656#1" expanded="false" />
-            <element signature="e#10658#11051#1" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="8096" max-vertical-offset="10370">
-          <caret line="502" column="17" selection-start-line="502" selection-start-column="17" selection-end-line="502" selection-end-column="17" />
-          <folding>
-            <element signature="e#8183#8424#2" expanded="true" />
-            <element signature="e#8425#8818#2" expanded="true" />
+            <element signature="e#10515#10756#1" expanded="false" />
+            <element signature="e#10758#11151#1" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.153847" vertical-offset="1407" max-vertical-offset="2380">
-          <caret line="109" column="26" selection-start-line="109" selection-start-column="26" selection-end-line="109" selection-end-column="26" />
+        <state vertical-scroll-proportion="-20.423077" vertical-offset="1152" max-vertical-offset="2380">
+          <caret line="99" column="12" selection-start-line="99" selection-start-column="12" selection-end-line="99" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2956044" vertical-offset="2536" max-vertical-offset="6885">
-          <caret line="179" column="70" selection-start-line="179" selection-start-column="70" selection-end-line="179" selection-end-column="70" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2332" max-vertical-offset="6885">
+          <caret line="179" column="49" selection-start-line="179" selection-start-column="49" selection-end-line="179" selection-end-column="49" />
           <folding>
             <element signature="e#5571#6034#0" expanded="false" />
             <element signature="e#6082#6429#0" expanded="false" />
@@ -331,6 +326,17 @@
             <element signature="e#9285#9377#0" expanded="false" />
             <element signature="e#9427#9825#0" expanded="false" />
             <element signature="e#9872#10372#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6399108" vertical-offset="3710" max-vertical-offset="10421">
+          <caret line="252" column="24" selection-start-line="252" selection-start-column="24" selection-end-line="252" selection-end-column="24" />
+          <folding>
+            <element signature="e#8212#8453#2" expanded="true" />
+            <element signature="e#8454#8847#2" expanded="true" />
           </folding>
         </state>
       </provider>
