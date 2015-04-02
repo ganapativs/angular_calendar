@@ -43,7 +43,7 @@
             </span>
     </div>
     <div class="timebar"
-         ng-if="currentDate"
+         ng-show="currentDate"
          ng-class="{'active':currentDate}">
         <div class="fullday_wrap"
              ng-repeat="full in eventsList[formatted] | filter: fulldayCheck track by $index"
