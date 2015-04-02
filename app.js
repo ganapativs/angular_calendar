@@ -54,7 +54,7 @@
                 },
                 end:{
                     date:"31-03-2015",
-                    time:"0:30"
+                    time:"2:30"
                 }
             },
             {
@@ -65,7 +65,7 @@
                 },
                 end:{
                     date:"29-03-2015",
-                    time:"3:30"
+                    time:"2:50"
                 }
             },
             {
@@ -182,8 +182,8 @@
                 };
 
                 scope.nextday= function (day,index,week,track) {
-                    setTimeout(function () {
-                        scope.$apply(function () {
+                    //setTimeout(function () {
+                    //    scope.$apply(function () {
                             if(index==6&&track!=week.length-1) {  //last day of the week
                                 track = track + 1;
                                 index=-1;
@@ -197,13 +197,13 @@
                                 scope.selected = t.date.utc().add(1,'d');
                                 scope.formatted=scope.selected.format('DD-MM-YYYY');
                                 scope.currentDate=week[track].days[index+1];
-                        });
-                    },0);
+                        //});
+                    //},0);
                 };
 
                 scope.prevday= function (day,index,week,track) {
-                    setTimeout(function () {
-                        scope.$apply(function () {
+                    //setTimeout(function () {
+                    //    scope.$apply(function () {
                             if(index==0&&track!=0) {  //last day of the week
                                 track = track - 1;
                                 index=7;
@@ -217,8 +217,8 @@
                                 scope.selected = t.date.utc().subtract(1,'d');
                                 scope.formatted=scope.selected.format('DD-MM-YYYY');
                                 scope.currentDate=week[track].days[index-1];
-                        });
-                    },0);
+                        //});
+                    //},0);
                 };
 
                 scope.fulldayCheck = function (item) {
@@ -227,6 +227,13 @@
 
                 scope.nonfulldayCheck = function (item) {
                     return item.fullday !== true;
+                };
+
+                scope.displayCreator = function (h,start) {
+                        if(typeof start === 'object'){ //Might be called before creating events array, ignore if eventlist is not created.
+                            return;
+                        }
+                        return (h==parseInt(start.split(':')[0]));
                 };
             }
         };
@@ -337,17 +344,26 @@
     });
 
     app.filter("eventForHour",function(){
-        return function(event,num){
+        return function(event,num,isCalledByClass){
+            //isCalledByClass is used to ignore ng-class condition calls and not to increment displayed count
+            if(!isCalledByClass)
+                if(num==0){
+                    angular.forEach(event, function (e,i) {
+                        e.displayed=0;
+                    });
+                }
             var x=[];
             angular.forEach(event, function (e,i) {
                 var start_split= e.start.split(':');
                 var end_split= e.end.split(':');
                 //console.log(start_split,end_split,num)
                 if(num>=parseInt(start_split[0])&&num<=parseInt(end_split[0])){
+                    if(!isCalledByClass){
+                        e.displayed++;
+                    }
                     x.push(e);
                 }
             });
-            //console.log(x,num)
             return x;
         }
     });

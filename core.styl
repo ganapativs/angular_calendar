@@ -562,6 +562,12 @@ calendar
               color: rgba(255, 255, 255, 0.75);
               transition all 0.3s ease
               text-overflow: ellipsis;
+              &.transparent
+                  opacity 0.1
+              &.first_display
+                color: #fff;
+                opacity 1
+                line-height: 20px;
             > .time
               display block
               width: 100%;
@@ -574,6 +580,11 @@ calendar
               transition all 0.3s ease
               text-overflow: ellipsis;
               color: #bbb;
+              &.transparent
+                opacity 0.1
+              &.first_display
+                font-size: 11px;
+                opacity 1
             .black_bg
               absolute left 0 top 0
               width 100%
@@ -586,6 +597,7 @@ calendar
               background: #AD00AB !important;
               > .name
                 color: #fff;
+                opacity 1
                 line-height: 20px;
               > .time
                 font-size: 11px;

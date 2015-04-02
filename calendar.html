@@ -43,7 +43,7 @@
             </span>
     </div>
     <div class="timebar"
-         ng-show="currentDate"
+         ng-if="currentDate"
          ng-class="{'active':currentDate}">
         <div class="fullday_wrap"
              ng-repeat="full in eventsList[formatted] | filter: fulldayCheck track by $index"
@@ -62,15 +62,15 @@
         </div>
         <div class="hour"
              ng-repeat="h in hours track by $index"
-             ng-class="{'active':currentDate,'noevent':(eventsList[formatted] | filter: nonfulldayCheck | eventForHour:h).length==0}"
+             ng-class="{'active':currentDate,'noevent':(eventsList[formatted] | filter: nonfulldayCheck | eventForHour: h:true ).length==0}"
              ng-style="transition($index)" ng-init="eventTracker=1">
             <div class="left"><span>{{(h+11)%12+1}}<small>{{ (h<12)&&'AM'||(h>=12)&&'PM'  }}</small></span></div>
             <div class="right">
                 <div ng-repeat="event in eventsList[formatted] | filter: nonfulldayCheck | eventForHour:h track by $index">
                     <div class="right_event_flex" ng-style="{'background':event.color}">
                         <div class="black_bg"></div>
-                        <span class="name">{{ event.name }}</span>
-                        <span class="time">{{ event.start }}-{{ event.end }}</span>
+                        <span class="name" ng-class="{'transparent':!displayCreator(h,event.start),'first_display':displayCreator(h,event.start)}">{{ event.name }}</span>
+                        <span class="time" ng-class="{'transparent':!displayCreator(h,event.start),'first_display':displayCreator(h,event.start)}">{{ event.start }}-{{ event.end }}</span>
                     </div>
                 </div>
             </div>
