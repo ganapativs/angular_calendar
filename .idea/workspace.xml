@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bd320af7-032b-4c0c-95d3-c24d1ef0cb79" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/calendar.html" afterPath="$PROJECT_DIR$/calendar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="angular_calender.iws" />
@@ -31,17 +31,17 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-27.615385" vertical-offset="98" max-vertical-offset="969">
-              <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+            <state vertical-scroll-proportion="-17.0" vertical-offset="0" max-vertical-offset="969">
+              <caret line="26" column="6" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="calendar.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="calendar.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/calendar.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8036739" vertical-offset="558" max-vertical-offset="1479">
+            <state vertical-scroll-proportion="-47.076923" vertical-offset="0" max-vertical-offset="1479">
               <caret line="72" column="202" selection-start-line="72" selection-start-column="202" selection-end-line="72" selection-end-column="202" />
               <folding />
             </state>
@@ -62,12 +62,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3863" max-vertical-offset="7021">
-              <caret line="253" column="33" selection-start-line="253" selection-start-column="22" selection-end-line="253" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.8862876" vertical-offset="2571" max-vertical-offset="3468">
+              <caret line="396" column="5" selection-start-line="396" selection-start-column="5" selection-end-line="396" selection-end-column="5" />
               <folding>
+                <element signature="e#2131#4499#0" expanded="false" />
                 <element signature="e#6161#6624#0" expanded="false" />
                 <element signature="e#6672#7019#0" expanded="false" />
                 <element signature="e#10382#10474#0" expanded="false" />
@@ -88,10 +89,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/core.css" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/core.styl" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/calendar.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/app.js" />
       </list>
     </option>
   </component>
@@ -143,6 +144,20 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="angular_calender" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular_calender" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular_calender" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="core.styl" />
+              <option name="myItemType" value="com.intellij.plugins.watcher.projectView.NestingTreeNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -271,7 +286,13 @@
       <option name="project" value="LOCAL" />
       <updated>1427938299515</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Converted  display time">
+      <created>1427938665791</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1427938665791</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -339,7 +360,8 @@
     <MESSAGE value="Animations fixed" />
     <MESSAGE value="Seperated template" />
     <MESSAGE value="Avoiding repeated events show" />
-    <option name="LAST_COMMIT_MESSAGE" value="Avoiding repeated events show" />
+    <MESSAGE value="Converted  display time" />
+    <option name="LAST_COMMIT_MESSAGE" value="Converted  display time" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -348,17 +370,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.4182016" vertical-offset="6494" max-vertical-offset="11067">
-          <caret line="459" column="1" selection-start-line="459" selection-start-column="1" selection-end-line="459" selection-end-column="1" />
-          <folding>
-            <element signature="e#10762#11003#1" expanded="false" />
-            <element signature="e#11005#11398#1" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core.styl">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="9541" max-vertical-offset="10795">
@@ -371,19 +382,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/calendar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-47.076923" vertical-offset="0" max-vertical-offset="1479">
+          <caret line="72" column="202" selection-start-line="72" selection-start-column="202" selection-end-line="72" selection-end-column="202" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="8.574725" vertical-offset="0" max-vertical-offset="14093">
+          <caret line="459" column="1" selection-start-line="459" selection-start-column="1" selection-end-line="459" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-27.615385" vertical-offset="98" max-vertical-offset="969">
-          <caret line="48" column="9" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
+        <state vertical-scroll-proportion="-17.0" vertical-offset="0" max-vertical-offset="969">
+          <caret line="26" column="6" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3863" max-vertical-offset="7021">
-          <caret line="253" column="33" selection-start-line="253" selection-start-column="22" selection-end-line="253" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.8862876" vertical-offset="2571" max-vertical-offset="3468">
+          <caret line="396" column="5" selection-start-line="396" selection-start-column="5" selection-end-line="396" selection-end-column="5" />
           <folding>
+            <element signature="e#2131#4499#0" expanded="false" />
             <element signature="e#6161#6624#0" expanded="false" />
             <element signature="e#6672#7019#0" expanded="false" />
             <element signature="e#10382#10474#0" expanded="false" />
@@ -391,14 +419,6 @@
             <element signature="e#10969#11469#0" expanded="false" />
             <element signature="e#11537#15252#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/calendar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8036739" vertical-offset="558" max-vertical-offset="1479">
-          <caret line="72" column="202" selection-start-line="72" selection-start-column="202" selection-end-line="72" selection-end-column="202" />
-          <folding />
         </state>
       </provider>
     </entry>
