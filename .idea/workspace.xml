@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="bd320af7-032b-4c0c-95d3-c24d1ef0cb79" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core.css" afterPath="$PROJECT_DIR$/core.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core.styl" afterPath="$PROJECT_DIR$/core.styl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="angular_calender.iws" />
@@ -48,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="core.styl" pinned="false" current-in-tab="false">
+      <file leaf-file-name="core.styl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/core.styl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="9541" max-vertical-offset="10795">
-              <caret line="565" column="29" selection-start-line="565" selection-start-column="29" selection-end-line="565" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.62095875" vertical-offset="9133" max-vertical-offset="10795">
+              <caret line="565" column="27" selection-start-line="565" selection-start-column="27" selection-end-line="565" selection-end-column="27" />
               <folding>
                 <element signature="e#1986#2263#2" expanded="true" />
                 <element signature="e#8532#8773#2" expanded="true" />
@@ -62,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8862876" vertical-offset="2571" max-vertical-offset="3468">
-              <caret line="396" column="5" selection-start-line="396" selection-start-column="5" selection-end-line="396" selection-end-column="5" />
+            <state vertical-scroll-proportion="-8.913794" vertical-offset="3410" max-vertical-offset="4658">
+              <caret line="359" column="59" selection-start-line="359" selection-start-column="59" selection-end-line="359" selection-end-column="59" />
               <folding>
                 <element signature="e#2131#4499#0" expanded="false" />
                 <element signature="e#6161#6624#0" expanded="false" />
@@ -74,7 +75,6 @@
                 <element signature="e#10382#10474#0" expanded="false" />
                 <element signature="e#10524#10922#0" expanded="false" />
                 <element signature="e#10969#11469#0" expanded="false" />
-                <element signature="e#11537#15252#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -89,10 +89,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/core.css" />
-        <option value="$PROJECT_DIR$/core.styl" />
         <option value="$PROJECT_DIR$/calendar.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/core.styl" />
       </list>
     </option>
   </component>
@@ -292,7 +292,13 @@
       <option name="project" value="LOCAL" />
       <updated>1427938665791</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Cleaned up">
+      <created>1427941476745</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1427941476745</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -361,7 +367,8 @@
     <MESSAGE value="Seperated template" />
     <MESSAGE value="Avoiding repeated events show" />
     <MESSAGE value="Converted  display time" />
-    <option name="LAST_COMMIT_MESSAGE" value="Converted  display time" />
+    <MESSAGE value="Cleaned up" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -370,18 +377,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/core.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="9541" max-vertical-offset="10795">
-          <caret line="565" column="29" selection-start-line="565" selection-start-column="29" selection-end-line="565" selection-end-column="29" />
-          <folding>
-            <element signature="e#1986#2263#2" expanded="true" />
-            <element signature="e#8532#8773#2" expanded="true" />
-            <element signature="e#8774#9167#2" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/calendar.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-47.076923" vertical-offset="0" max-vertical-offset="1479">
@@ -408,8 +403,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8862876" vertical-offset="2571" max-vertical-offset="3468">
-          <caret line="396" column="5" selection-start-line="396" selection-start-column="5" selection-end-line="396" selection-end-column="5" />
+        <state vertical-scroll-proportion="-8.913794" vertical-offset="3410" max-vertical-offset="4658">
+          <caret line="359" column="59" selection-start-line="359" selection-start-column="59" selection-end-line="359" selection-end-column="59" />
           <folding>
             <element signature="e#2131#4499#0" expanded="false" />
             <element signature="e#6161#6624#0" expanded="false" />
@@ -417,7 +412,18 @@
             <element signature="e#10382#10474#0" expanded="false" />
             <element signature="e#10524#10922#0" expanded="false" />
             <element signature="e#10969#11469#0" expanded="false" />
-            <element signature="e#11537#15252#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.62095875" vertical-offset="9133" max-vertical-offset="10795">
+          <caret line="565" column="27" selection-start-line="565" selection-start-column="27" selection-end-line="565" selection-end-column="27" />
+          <folding>
+            <element signature="e#1986#2263#2" expanded="true" />
+            <element signature="e#8532#8773#2" expanded="true" />
+            <element signature="e#8774#9167#2" expanded="true" />
           </folding>
         </state>
       </provider>

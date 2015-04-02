@@ -515,15 +515,15 @@ calendar .timebar .hour .left > span {
   line-height: 28px;
   vertical-align: middle;
   margin-top: 5px;
-  background: #eee;
+  background: #00b182;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -o-border-radius: 50%;
   -ms-border-radius: 50%;
   border-radius: 50%;
   text-align: center;
-  color: #0a516d;
-  border: 1px solid #e5e5e5;
+  color: #fff;
+  border: 1px solid #00b182;
   font-size: 11px;
   position: relative;
 }
@@ -643,11 +643,7 @@ calendar .timebar .hour .right .right_event_flex {
   -o-transition: all 0.2s ease;
   -ms-transition: all 0.2s ease;
   transition: all 0.2s ease;
-  -webkit-box-shadow: inset 0px 0px 50px 0px rgba(255,255,255,0.15);
-  -moz-box-shadow: inset 0px 0px 50px 0px rgba(255,255,255,0.15);
-  -o-box-shadow: inset 0px 0px 50px 0px rgba(255,255,255,0.15);
-  -ms-box-shadow: inset 0px 0px 50px 0px rgba(255,255,255,0.15);
-  box-shadow: inset 0px 0px 50px 0px rgba(255,255,255,0.15);
+/*box-shadow: inset 0px 0px 50px 0px rgba(255, 255, 255, 0.15);*/
   position: relative;
 }
 calendar .timebar .hour .right .right_event_flex > .name {
@@ -667,7 +663,7 @@ calendar .timebar .hour .right .right_event_flex > .name {
   text-overflow: ellipsis;
 }
 calendar .timebar .hour .right .right_event_flex > .name.transparent {
-  opacity: 0.1;
+  opacity: 0;
 }
 calendar .timebar .hour .right .right_event_flex > .name.first_display {
   color: #fff;
@@ -689,7 +685,7 @@ calendar .timebar .hour .right .right_event_flex > .time {
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
   text-overflow: ellipsis;
-  color: #bbb;
+  color: #e0e0e0;
 }
 calendar .timebar .hour .right .right_event_flex > .time.transparent {
   opacity: 0.1;
@@ -704,17 +700,13 @@ calendar .timebar .hour .right .right_event_flex .black_bg {
   top: 0 !important;
   width: 100%;
   height: 100%;
-  background: #069;
-  opacity: 0.4;
+  background: #8b8b8b;
+  opacity: 0.2;
 }
 calendar .timebar .hour .right .right_event_flex:hover {
   cursor: pointer;
-  -webkit-box-shadow: inset 0px 0px 0px 0px rgba(255,255,255,0.5);
-  -moz-box-shadow: inset 0px 0px 0px 0px rgba(255,255,255,0.5);
-  -o-box-shadow: inset 0px 0px 0px 0px rgba(255,255,255,0.5);
-  -ms-box-shadow: inset 0px 0px 0px 0px rgba(255,255,255,0.5);
-  box-shadow: inset 0px 0px 0px 0px rgba(255,255,255,0.5);
-  background: #ad00ab !important;
+/*box-shadow: inset 0px 0px 0px 0px rgba(255, 255, 255, 0.5);*/
+  background: #1150c2 !important;
 }
 calendar .timebar .hour .right .right_event_flex:hover > .name {
   color: #fff;

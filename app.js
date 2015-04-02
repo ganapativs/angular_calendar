@@ -311,7 +311,7 @@
                     x.name=events[i].name;
                     x.fullday=false;
                     x.color=Please.make_color({
-                        base_color: 'rebeccapurple' //set your base color
+                        base_color: 'bisque' //set your base color
                     });
                     _events[start].push(x);
                 }
@@ -328,7 +328,7 @@
                                 x.name=events[i].name;
                                 x.fullday=false;
                                 x.color=Please.make_color({
-                                    base_color: 'rebeccapurple' //set your base color
+                                    base_color: 'bisque' //set your base color
                                 });
                                 _events[start].push(x);
                             }
@@ -343,7 +343,7 @@
                                     x.name=events[i].name;
                                     x.fullday=false;
                                     x.color=Please.make_color({
-                                        base_color: 'rebeccapurple' //set your base color
+                                        base_color: 'bisque' //set your base color
                                     });
                                     _events[start].push(x);
                                 }
@@ -357,7 +357,7 @@
                                     x.name=events[i].name;
                                     x.fullday=true;
                                     x.color=Please.make_color({
-                                        base_color: 'rebeccapurple' //set your base color
+                                        base_color: 'bisque' //set your base color
                                     });
                                     _events[start].push(x);
                                 }
