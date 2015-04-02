@@ -91,6 +91,28 @@
                 }
             },
             {
+                name:"Watch football match",
+                start:{
+                    date:"30-03-2015",
+                    time:"21:30"
+                },
+                end:{
+                    date:"30-03-2015",
+                    time:"23:30"
+                }
+            },
+            {
+                name:"Play FIFA",
+                start:{
+                    date:"30-03-2015",
+                    time:"09:30"
+                },
+                end:{
+                    date:"30-03-2015",
+                    time:"10:30"
+                }
+            },
+            {
                 name:"Kenn Conference",
                 start:{
                     date:"29-03-2015",
