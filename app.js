@@ -251,6 +251,10 @@
                     return item.fullday !== true;
                 };
 
+                scope.timeConvert = function (time) {
+                    return moment(time, ["HH:mm"]).format("h:mm A");
+                };
+
                 scope.displayCreator = function (h,start) {
                         if(typeof start === 'object'){ //Might be called before creating events array, ignore if eventlist is not created.
                             return;

@@ -70,7 +70,7 @@
                     <div class="right_event_flex" ng-style="{'background':event.color}">
                         <div class="black_bg"></div>
                         <span class="name" ng-class="{'transparent':!displayCreator(h,event.start),'first_display':displayCreator(h,event.start)}">{{ event.name }}</span>
-                        <span class="time" ng-class="{'transparent':!displayCreator(h,event.start),'first_display':displayCreator(h,event.start)}">{{ event.start }}-{{ event.end }}</span>
+                        <span class="time" ng-class="{'transparent':!displayCreator(h,event.start),'first_display':displayCreator(h,event.start)}">{{ timeConvert(event.start) }}-{{ timeConvert(event.end) }}</span>
                     </div>
                 </div>
             </div>
